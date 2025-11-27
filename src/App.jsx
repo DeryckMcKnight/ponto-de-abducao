@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const baseUrl = import.meta.env.BASE_URL
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -23,7 +24,7 @@ function App() {
   }, [])
 
   return (
-    <Router basename="/">
+    <Router basename={baseUrl}>
       <div className="app">
         {/* Cursor personalizado */}
         <div 
@@ -51,7 +52,7 @@ function App() {
         {/* Rotas */}
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home baseUrl={baseUrl} />} />
             <Route path="/catalogo" element={<Catalog />} />
             <Route path="/contato" element={<Contact />} />
           </Routes>

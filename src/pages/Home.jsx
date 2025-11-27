@@ -39,7 +39,7 @@ const featuredProducts = [
   },
 ]
 
-function Home() {
+function Home({ baseUrl = '' }) {
   return (
     <div className="home">
       {/* Hero Section - Banner de Destaque */}

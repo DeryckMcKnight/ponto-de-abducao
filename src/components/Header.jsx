@@ -13,7 +13,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo-link">
-          <img src="/logo.jpg" alt="Ponto de Abdução" className="header-logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.jpg`} alt="Ponto de Abdução" className="header-logo" />
           <span className="brand-text">PONTO DE ABDUÇÃO</span>
         </Link>
 
